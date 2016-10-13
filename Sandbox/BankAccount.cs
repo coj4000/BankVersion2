@@ -16,12 +16,44 @@ namespace Sandbox
 
         public void Deposit(double amount)
         {
-            balance = balance + amount;
+            if (amount >= 0)
+            {
+                balance = balance + amount;
+            }
+            else
+            {
+                Console.WriteLine("Det kan du ikke");
+            }
+          
         }
 
         public void Withdraw(double amount)
         {
-            balance = balance - amount;
+            if (amount >= 0)
+            {
+                if (balance <= 0)
+                {
+                    Console.WriteLine("Det kan du ikke");
+                }
+                else
+                {
+                    if (amount <= balance)
+                    {
+                        balance = balance - amount;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Det kan du ikke");
+                    }
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("Det kan du ikke");
+            }
+            
+            
         }
 
         public double GetBalance()

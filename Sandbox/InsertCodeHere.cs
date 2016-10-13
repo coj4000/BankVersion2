@@ -12,6 +12,8 @@ namespace Sandbox
 
             // Test the BankAccount - make some deposits and withdrawals,
             // and check that the balance behaves as expected
+            myAccount.Deposit(400.0);
+            myAccount.Withdraw(800);
             myAccount.GetBalance();
             Console.WriteLine("Balance is now : {0}", myAccount.GetBalance());
 
